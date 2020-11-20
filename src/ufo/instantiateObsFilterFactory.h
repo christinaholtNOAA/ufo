@@ -22,6 +22,7 @@
 #include "ufo/filters/ObsDomainCheck.h"
 #include "ufo/filters/ObsDomainErrCheck.h"
 #include "ufo/filters/PoissonDiskThinning.h"
+#include "ufo/filters/PracticalBoundsCheck.h"
 #include "ufo/filters/PreQC.h"
 #include "ufo/filters/ProfileConsistencyChecks.h"
 #include "ufo/filters/QCmanager.h"
@@ -65,6 +66,8 @@ template<typename MODEL> void instantiateObsFilterFactory() {
            backgroundCheckRONBAMMaker("Background Check RONBAM");
   static oops::FilterMaker<MODEL, oops::ObsFilter<MODEL, ufo::TemporalThinning> >
            temporalThinningMaker("Temporal Thinning");
+  static oops::FilterMaker<MODEL, oops::ObsFilter<MODEL, ufo::PracticalBoundsCheck> >
+           practicalBoundsCheckMaker("Practical Bounds Check");
   static oops::FilterMaker<MODEL, oops::ObsFilter<MODEL, ufo::PoissonDiskThinning> >
            poissonDiskThinningMaker("Poisson Disk Thinning");
   static oops::FilterMaker<MODEL, oops::ObsFilter<MODEL, ufo::ObsDiagnosticsWriter> >

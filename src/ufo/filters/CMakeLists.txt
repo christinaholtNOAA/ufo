@@ -71,6 +71,8 @@ set ( filters_files
       Gaussian_Thinning.h
       GaussianThinningParameters.cc
       GaussianThinningParameters.h
+      PracticalBoundsCheck.cc
+      PracticalBoundsCheck.h
       PoissonDiskThinning.cc
       PoissonDiskThinning.h
       PoissonDiskThinningParameters.cc
